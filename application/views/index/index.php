@@ -21,6 +21,18 @@ if(isset($_SESSION['id'])):
 		<input type="submit" value="投稿">
 	</form>
 </div>
+<div class="timeline">
+	<?php
+		while($row = $timeline->fetch_assoc()) {
+			echo '<section class="timeline-post-data">';
+			echo '<h2 class="post-title">'.$row['title'].'</h2>';
+			echo '<h3 class="head">'.$row['head'].'</h3>';
+			echo '<p class="article">'.$row['article'].'</[p]>';
+			echo "</section>";
+		}
+	// $this->setTimeline();
+	?>
+</div>
 <?php else:
 	//guest.phpでまとめてもいいかも？
 ?>
@@ -33,6 +45,8 @@ if(isset($_SESSION['id'])):
 		height: 700px;
 		background: #526488;
 		padding: 10px 25px;
+		display: inline-block;
+		float: left;
 	}
 	input[name='title'] {
 		width: 350px;
@@ -57,5 +71,30 @@ if(isset($_SESSION['id'])):
 		background: #fff;
 		color: #526488;
 		margin: 20px auto;
+	}
+	div.timeline {
+		float: left;
+		width: 400px;
+		height: 700px;
+		background: #fff;
+		margin-left: 20px;
+		padding: 10px 25px;
+		display: inline-block;
+		box-shadow: 0 0 40px 10px rgba(0, 0, 0, 0.2);
+		overflow: scroll;
+	}
+	section.timeline-post-data {
+		padding: 10px 0;
+		border-bottom: solid 1px #aaa;
+	}
+	section.timeline-post-data h2{
+		font-size: 40px;
+	}
+
+	section.timeline-post-data h3{
+		font-size: 32px;
+	}
+	section.timeline-post-data p{
+		font-size: 18px;
 	}
 </style>
