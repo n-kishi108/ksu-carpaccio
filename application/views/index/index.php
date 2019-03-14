@@ -24,11 +24,21 @@ if(isset($_SESSION['id'])):
 <div class="timeline">
 	<?php
 		while($row = $timeline->fetch_assoc()) {
-			echo '<section class="timeline-post-data">';
-			echo '<h2 class="post-title">'.$row['title'].'</h2>';
-			echo '<h3 class="head">'.$row['head'].'</h3>';
-			echo '<p class="article">'.$row['article'].'</[p]>';
-			echo "</section>";
+			$mysqli = new mysqli('localhost', 'root', '', 'carpaccio');
+			$sql = "SELECT `username` FROM `account` WHERE `id`='".$row['id']."'";
+			$result = $mysqli->query($sql);
+			while($r_row = $result->fetch_assoc()){
+				echo '<section class="timeline-post-data">';
+				echo '<div class="post-header">';
+				echo '<div class="user-icon"></div>';
+				echo '<h1 class="user-name">'.$r_row['username'].'</h1>';
+				echo '</div>';
+				echo '<h2 class="post-title">'.$row['title'].'</h2>';
+				echo '<h3 class="head">'.$row['head'].'</h3>';
+				echo '<p class="article">'.$row['article'].'</[p]>';
+				echo "</section>";
+				break;
+			}
 		}
 	// $this->setTimeline();
 	?>
@@ -86,6 +96,26 @@ if(isset($_SESSION['id'])):
 	section.timeline-post-data {
 		padding: 10px 0;
 		border-bottom: solid 1px #aaa;
+	}
+	section.timeline-post-data .post-header {
+		width: 100%;
+		height: 70px;
+		padding: 10px 0;
+	}
+	section.timeline-post-data .user-icon {
+		width: 50px;
+		height: 50px;
+		border-radius: 25px;
+		background: #aaa;
+		display: inline-block;
+	}
+	section.timeline-post-data .user-name {
+		position: relative;
+		font-size: 16px;
+		line-height: 50px;
+		margin-left: 20px;
+		display: inline-block;
+		vertical-align: top;
 	}
 	section.timeline-post-data h2{
 		font-size: 40px;
