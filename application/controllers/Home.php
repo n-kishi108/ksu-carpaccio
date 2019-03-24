@@ -7,6 +7,9 @@ class Home extends CI_Controller {
 		$this->load->model('history');
 	}
 	public function index() {
+		if(!isset($_SESSION['id'])){
+			header('Location:'.base_url().'login/');
+		}
 		$data['history'] = $this->getHistory();
 		$this->load->view('templates/header');
 		$this->load->view('home/index', $data);
