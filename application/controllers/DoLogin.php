@@ -18,7 +18,7 @@ class DoLogin extends CI_Controller {
 			$_SESSION['username'] = $username;
 			//ログインに成功した場合の処理
 			echo $_SESSION['username'].'さん、こんにちは。';
-			header('Location: '.base_url().'home/');
+			header('Location: '.base_url());
 			exit;
 		}else {
 			exit('ログインに失敗しました。');
