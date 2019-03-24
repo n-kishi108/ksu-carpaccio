@@ -1,4 +1,5 @@
 <?php
+session_start();
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Index extends CI_Controller {
@@ -21,11 +22,6 @@ class Index extends CI_Controller {
 		return $result;
 		while($row = $result->fetch_assoc()) {
 			return $row;
-			// echo "<section>";
-			// echo '<h2 class="title">'.$row['title'].'</h2>';
-			// echo '<h3 class="head">'.$row['head'].'</h3>';
-			// echo '<p class="article">'.$row['article'].'</[p]>';
-			// echo "</section>";
 		}
 		return array();
 	}
