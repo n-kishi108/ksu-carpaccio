@@ -1,6 +1,6 @@
 nav.navigation {
 	width: 200px;
-	height: 100vh;
+	height: 100%;
 	position: fixed;
 	top: 0;
 	background: rgb(97, 171, 170);
@@ -49,12 +49,11 @@ section.menu ul li {
 	display: block;
 	width: 200px;
 	height: 50px;
-	padding: 15px;
 	transition: .2s;
 }
 
 section.menu ul li:hover {
-	background: #fafafa;
+	background: #f5f5f5;
 }
 
 section.menu ul li:hover > a {
@@ -63,110 +62,18 @@ section.menu ul li:hover > a {
 
 section.menu ul li a {
 	display: block;
-	width: 170px;
-	height: 20px;
+	padding: 15px;
+	width: 200px;
+	height: 50px;
 	color: #fff;
 	text-decoration: none;
 	font-weight: bold;
 	font-size: 14px;
 }
 
-
-/* header {
-	position: fixed;
-	top: 0;
-	width: 350px;
-	height: 100vh;
-	background: rgb(45, 81, 108);
+.current {
+	background: #f5f5f5;
 }
-header h1, header h2, header h3, header h4, header h5, header h6, header ul li a{
-	font-weight: 200;
+.current > a {
+	color: rgb(97, 171, 170) !important;
 }
-header section {
-	width: 350px;
-	padding-left: 20px;
-	padding-right: 20px;
-	color: WHITE;
-}
-header a {
-	color: WHITE;
-}
-header a:hover {
-	text-decoration: none;
-	color: ORANGE;
-}
-
-header section:first-child {
-	min-height: 100px;
-	height: 60vh;
-	background: rgb(45, 81, 108);
-	padding-top: 10px;
-}
-
-header section:nth-child(2) {
-	min-height: 100px;
-	height: 30vh;
-	background: rgb(97, 171, 170);
-	border-top: solid 10px WHITE;
-	border-bottom: solid 10px WHITE;
-	box-sizing:border-box;
-}
-
-header section:last-child {
-	padding-bottom: 10px;
-	min-height: 100px;
-	height: 10vh;
-	background: rgb(205, 222, 196);
-}
-
-header section div.hamburger {
-	width: 40px;
-	height: 49px;
-}
-
-header section div.hamburger span {
-	width: 40px;
-	height: 13px;
-	background: WHITE;
-	display: block;
-}
-
-header section div.hamburger span:nth-child(2) {
-	margin: 5px 0;
-}
-
-header h1.user-name {
-	font-size: 30px;
-	line-height: 36px;
-	margin: 0;
-}
-header h2.user-id {
-	font-size: 16px;
-	color: lightgray;
-	font-weight: lighter;
-	line-height: 20px;
-	margin: 0;
-}
-
-header section nav {
-	display: block;
-	margin-top: 20px;
-}
-
-header section nav ul {
-	list-style: none;
-	padding: 0;
-}
-
-header section nav ul li {
-	font-size: 24px;
-}
-
-.circle {
-	width: 70px;
-	height: 70px;
-	border-radius: 50px;
-	background: #aaa;
-	display: inline-block;
-	margin: 15px 5px;
-} */
