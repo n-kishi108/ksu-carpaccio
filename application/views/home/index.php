@@ -32,7 +32,7 @@
 						echo '<h3 class="head">'.$row['head'].'</h3>';
 						echo '<p class="article">'.$row['article'].'</[p]>';
 						echo '<br />';
-						echo '<b class="text-primary" style="text-decoration: underbar;" onclick="edit('.$i.')">編集</b>';
+						echo '<b class="cp-btn" onclick="edit('.$i.')">編集</b>';
 						echo "</section>";
 						break;
 					}

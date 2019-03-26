@@ -1,9 +1,15 @@
+/*ベースカラーは
+rgb(45, 81, 108)
+or
+rgb(97, 171, 170)
+*/
 nav.navigation {
 	width: 200px;
 	height: 100%;
 	position: fixed;
 	top: 0;
-	background: rgb(97, 171, 170);
+	background: rgb(45, 81, 108);
+	user-select: none;
 }
 
 section {
@@ -57,7 +63,7 @@ section.menu ul li:hover {
 }
 
 section.menu ul li:hover > a {
-	color: rgb(97, 171, 170);
+	color: rgb(45, 81, 108);
 }
 
 section.menu ul li a {
@@ -75,5 +81,5 @@ section.menu ul li a {
 	background: #f5f5f5;
 }
 .current > a {
-	color: rgb(97, 171, 170) !important;
+	color: rgb(45, 81, 108) !important;
 }

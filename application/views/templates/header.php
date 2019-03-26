@@ -15,6 +15,7 @@ $current_url = current_url();
 		<link rel="shortcut icon" href="<?= base_url() ?>/assets/images/favicon/favicon.ico" /> <!--ファビコン設定-->
 		<!-- cssファイル読み込み -->
 		<link rel="stylesheet" href="<?= base_url() ?>assets/css/bootstrap.css" /> <!--Bootstrap読み込み-->
+		<link rel="stylesheet" href="<?= base_url() ?>assets/css/component.css">
 		<link rel="stylesheet" href="<?= base_url() ?>assets/css/header.css">
 		<link rel="stylesheet" href="<?= base_url() ?>assets/css/style.css"> <!--ここにメインのレイアウト-->
 

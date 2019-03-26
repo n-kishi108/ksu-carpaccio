@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="<?= base_url() ?>assets/css/index.css">
 <div class="timeline">
 	<?php
+		$i = 1;
 		while($row = $timeline->fetch_assoc()) {
 			$mysqli = new mysqli('localhost', 'root', '', 'carpaccio');
 			$sql = "SELECT `username` FROM `account` WHERE `id`='".$row['id']."'";
@@ -23,11 +24,12 @@
 				echo '<p class="article">'.$row['article'].'</[p]>';
 				echo '<br />';
 				if(isset($_SESSION['id']) && $row['id'] == $_SESSION['id']) {
-					echo '<a href="#"><b>編集</b></a>';
+					echo '<b class="cp-btn" onclick="edit('.$i.')">編集</b>';
 				}
 				echo "</section>";
 				break;
 			}
+			$i++;
 		}
 	?>
 </div>

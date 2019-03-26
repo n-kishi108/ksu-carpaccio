@@ -4,7 +4,7 @@ class Home extends CI_Controller {
 	public function __construct() {
 		parent::__construct();
 		$this->load->helper('url');
-		$this->load->model('history');
+		$this->load->model('timeline');
 	}
 	public function index() {
 		if(!isset($_SESSION['id'])){
@@ -17,7 +17,7 @@ class Home extends CI_Controller {
 	}
 
 	public function getHistory() {
-		$result = $this->history->history($_SESSION['id']);
+		$result = $this->timeline->history($_SESSION['id']);
 		return $result;
 		while($row = $result->fetch_assoc()) {
 			return $row;
