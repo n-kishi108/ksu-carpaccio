@@ -1,0 +1,100 @@
+/********************
+共通モジュール
+********************/
+.wrapper {
+	width: calc(100% - 50px);
+	max-width: 1400px;
+	font-size: 0;
+	margin: 0 auto;
+	padding-top: 30px;
+	display: flex;
+}
+.wrapper article, .wrapper aside .side-information {
+	box-sizing: border-box;
+	background: WHITE;
+	font-size: 18px;
+	border: solid 1px #c2c2c2;
+	border-radius: 5px;
+}
+
+/********************
+メイン要素
+********************/
+.wrapper .article-wrapper {
+	min-width: 0;
+	min-height: 1000px;
+	padding: 16px;
+}
+.wrapper article {
+	width: 100%;
+	height: 100%;
+	padding: 50px 100px;
+}
+
+/********************
+履歴リストのモジュール
+********************/
+.history-unit {
+	width: 100%;
+	height: 100px;
+	border-top: solid 1px #c2c2c2;
+	font-size: 0;
+}
+
+.history-unit:last-child {
+	border-bottom: solid 1px #c2c2c2;
+}
+
+.history-unit .user-icon {
+	width: 50px;
+	height: 50px;
+	border-radius: 25px;
+	background: #aaa;
+	margin: 25px 20px 25px 0;
+	display: inline-block;
+}
+
+.history-unit .kernel {
+	width: calc(100% - 70px);
+	height: 100px;
+	display: inline-block;
+	font-size: 16px;
+	vertical-align: top;
+	padding: 10px 0;
+	padding-right: 20px;
+}
+
+.history-unit .kernel h1.article-title {
+	font-size: 20px;
+	color: #000;
+	font-weight: bold;
+}
+
+.history-unit .kernel p.article-head {
+	width: 100%;
+	font-size: 14px;
+	color: #000;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+
+/********************
+サイドメニュー
+********************/
+.wrapper aside {
+	position: -webkit-sticky;
+	position: sticky;
+	top: 34px;
+	padding: 16px;
+	min-height: 500px;
+	max-height: 800px;
+}
+
+.wrapper aside .side-information {
+	display: block;
+	width: 100%;
+	padding: 25px 50px;
+	height: 100%;
+}

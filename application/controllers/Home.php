@@ -13,7 +13,7 @@ class Home extends CI_Controller {
 		$data['history'] = $this->getHistory();
 		$this->load->view('templates/header');
 		$this->load->view('home/index', $data);
-		$this->load->view('templates/footer');
+		// $this->load->view('templates/footer');
 	}
 
 	public function getHistory() {

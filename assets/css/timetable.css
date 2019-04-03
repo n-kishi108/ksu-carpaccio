@@ -1,0 +1,61 @@
+.wrapper {width: 100%;}
+.wrapper .content {
+	width: 90%;
+	max-width: 1200px;
+	height: 800px;
+	margin: 100px auto;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.class-unit {
+	font-size: 0;
+	padding: 16px 20px;
+	transition: .2s;
+	cursor: pointer;
+}
+
+.class-unit:not(.five) {
+	border-bottom: solid 1px #aaa;
+}
+
+.class-unit:hover {
+	background: #e2e2e2;
+}
+
+.wrapper .content .mon { grid-column: 1 / 2; }
+.wrapper .content .tue { grid-column: 2 / 3; }
+.wrapper .content .wed { grid-column: 3 / 4; }
+.wrapper .content .thu { grid-column: 4 / 5; }
+.wrapper .content .fri { grid-column: 5 / 6; }
+
+.wrapper .content .one { grid-row: 1 / 2; }
+.wrapper .content .two { grid-row: 2 / 3; }
+.wrapper .content .three { grid-row: 3 / 4; }
+.wrapper .content .four { grid-row: 4 / 5; }
+.wrapper .content .five { grid-row: 5 / 6; }
+
+.class-unit h1, .class-unit h2 {
+	display: block;
+	width: 100%;
+	text-align: center;
+	color: #000;
+}
+
+.class-unit h1 {
+	margin-top: 42px;
+	font-size: 18px;
+	height: 24px;
+	line-height: 24px;
+}
+
+.class-unit:hover > h1, .class-unit:hover > h2 {
+	text-decoration: underline;
+}
+.class-unit h2 {
+	font-size: 14px;
+	height: 20px;
+	line-height: 20px;
+	margin-bottom: 42px;
+}
