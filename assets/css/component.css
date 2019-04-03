@@ -1,0 +1,14 @@
+.cp-btn {
+	display: inline-block;
+	width: 60px;
+	height: 26px;
+	line-height: 26px;
+	background: #007bff;
+	color: #fff;
+	font-size: 14px;
+	border-radius: 13px;
+	text-align: center;
+}
+
+.block {display: block;}
+.il-block {display: inline-block;}

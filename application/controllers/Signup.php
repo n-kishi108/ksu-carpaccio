@@ -7,7 +7,7 @@ class Signup extends CI_Controller {
 		$this->load->helper('url');
 		$this->load->view('templates/header');
 		$this->load->view('signup/index');
-		$this->load->view('templates/footer');
+		// $this->load->view('templates/footer');
 	}
 }
  ?>

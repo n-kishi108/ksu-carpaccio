@@ -1,0 +1,109 @@
+div.wrapper {
+	width: 98%;
+	max-width: 1600px;
+	min-height: 100vh;
+	margin: 0 auto;
+	/* border: solid 1px #000; */
+}
+
+div.wrapper input[type='submit'] {
+	float: right;
+	width: 150px;
+	height: 40px;
+	margin: 5px 0;
+	border-radius: 8px;
+	background: rgb(45, 81, 108);
+	color: WHITE;
+	box-sizing: border-box;
+	transition: .2s;
+}
+
+div.wrapper input[type='submit']:hover {
+	background: WHITE;
+	color: rgb(45, 81, 108);
+	border: solid 2px rgb(45, 81, 108);
+}
+
+nav.post-navigation {
+	width: 100%;
+	height: 55px;
+}
+
+div.title-wrapper {
+	width: 100%;
+	height: 100px;
+}
+
+div.title-wrapper input[name='title']{
+	width: 100%;
+	height: 50px;
+	margin: 25px 0;
+	padding: 5px;
+	border-radius: 8px;
+	border: solid 2px rgb(45, 81, 108);
+}
+
+div.wrapper input[type='text']:focus, div.wrapper textarea:focus {
+	outline: none;
+}
+
+div.editor-wrapper {
+	width: 100%;
+	min-height: 500px;
+	padding: 25px 50px;
+	border-radius: 10px;
+	background: #fff;
+	border: solid 1px #aaa;
+}
+
+div.editor-wrapper input[name='head'] {
+	width: 100%;
+	height: 50px;
+	margin: 25px 0;
+	padding: 5px;
+	border-radius: 8px;
+	border: solid 2px rgb(45, 81, 108);
+}
+
+div.editor-wrapper textarea {
+	width: 100%;
+	height: 500px;
+	margin: 25px 0;
+	padding: 5px;
+	border-radius: 8px;
+	border: solid 2px rgb(45, 81, 108);
+}
+
+
+div.post_sec {
+	width: 400px;
+	height: 700px;
+	background: #526488;
+	padding: 10px 25px;
+	display: inline-block;
+	float: left;
+}
+input[name='title'] {
+	width: 350px;
+	height: 50px;
+	line-height: 50px;
+	margin: 10px 0;
+}
+textarea[name='head'] {
+	width: 350px;
+	height: 100px;
+	margin: 10px 0;
+}
+textarea[name='article'] {
+	width: 350px;
+	height: 360px;
+	margin: 10px 0;
+}
+textarea{resize: none;}
+input[type='submit'] {
+	width: 100px;
+	height: 30px;
+	background: #fff;
+	color: #526488;
+	margin: 20px auto;
+}

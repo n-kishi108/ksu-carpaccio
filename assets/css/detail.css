@@ -1,0 +1,368 @@
+p {
+	overflow-wrap: break-word;
+}
+.wrapper {
+	width: calc(100% - 50px);
+	max-width: 1400px;
+	font-size: 0;
+	margin: 0 auto;
+	padding-top: 30px;
+	display: flex;
+}
+.wrapper article, .wrapper aside .side-information {
+	box-sizing: border-box;
+	background: WHITE;
+	font-size: 18px;
+}
+
+/*******************
+記事本体
+*******************/
+
+.wrapper .article-wrapper {
+	min-width: 0;
+	min-height: 1000px;
+	padding: 16px;
+}
+.wrapper article {
+	width: 100%;
+	height: 100%;
+	padding: 50px 100px;
+}
+
+.wrapper article small {
+	text-align: right;
+	display: block;
+	width: 100%;
+	padding-bottom: 10px;
+}
+
+.wrapper article h1 {
+	display: block;
+	width: 100%;
+	line-height: 50px;
+	font-weight: bold;
+	font-size: 40px;
+	border-bottom: solid 2px rgb(45, 81, 108);
+}
+
+.wrapper article h2.preview {
+	display: block;
+	width: 100%;
+	line-height: 30px;
+	font-size: 18px;
+	padding: 15px 30px;
+	margin: 30px 0;
+	background: #f5f5f5;
+}
+
+.wrapper article p.article {
+	font-size: 16px;
+}
+
+/*******************
+投稿者について
+*******************/
+
+.wrapper aside {
+	position: -webkit-sticky;
+	position: sticky;
+	top: 34px;
+	padding: 16px;
+	min-height: 500px;
+	max-height: 800px;
+}
+
+.wrapper aside .side-information {
+	display: block;
+	width: 100%;
+	padding: 25px 50px;
+	height: 100%;
+}
+
+.wrapper aside .side-information .profile-icon{
+	width: 200px;
+	height: 200px;
+	border-radius: 100px;
+	border: solid 10px #fff;
+	margin: 25px auto;
+	background: #aaa;
+}
+
+.wrapper aside .side-information h1.user-name {
+	font-size: 36px;
+	font-weight: bold;
+	color: #000;
+}
+
+.wrapper aside .side-information h2.user-id {
+	font-size: 24px;
+	font-weight: bold;
+	color: gray;
+}
+
+.wrapper aside .side-information p.user-profile {
+	margin-top: 25px;
+	border-top: solid 1px #aaa;
+	padding-top: 25px;
+	font-size: 16px;
+	font-weight: lighter;
+	color: #000;
+}
+
+/*******************
+コメント欄
+*******************/
+
+
+section.comment {
+	width: calc(100% - 50px);
+	max-width: 1400px;
+	min-height: 200px;
+	font-size: 18px;
+	margin: 100px auto 0 auto;
+	padding: 50px 15px;
+	border-top: solid 1px #aaa;
+}
+
+section.comment h2 {
+}
+
+/* section.comment form {
+	display: block;
+	height: 300px;
+} */
+
+section.comment div.comment-wrapper {
+	display: block;
+	height: 300px;
+	width: 100%;
+}
+
+section.comment div.comment-wrapper textarea {
+	box-sizing: border-box;
+	width: 100%;
+	min-height: 200px;
+	border-radius: 20px;
+	padding: 10px;
+	resize: none;
+}
+
+section.comment div.comment-wrapper textarea:focus, section.comment div.comment-wrapper textarea:active {
+	outline: none;
+	border: solid 2px rgb(45, 81, 108);
+}
+
+section.comment div.comment-wrapper input[type='submit'] {
+	float: right;
+	width: 150px;
+	height: 40px;
+	margin: 5px 0;
+	border-radius: 8px;
+	background: rgb(45, 81, 108);
+	color: WHITE;
+	box-sizing: border-box;
+	transition: .2s;
+}
+
+section.comment div.comment-wrapper input[type='submit']:hover {
+	background: WHITE;
+	color: rgb(45, 81, 108);
+	border: solid 2px rgb(45, 81, 108);
+}
+
+
+section.comment div.comment-wrapper button {
+	float: right;
+	width: 150px;
+	height: 40px;
+	margin: 5px 0;
+	border-radius: 8px;
+	background: rgb(45, 81, 108);
+	color: WHITE;
+	box-sizing: border-box;
+	transition: .2s;
+}
+
+section.comment div.comment-wrapper button:hover {
+	background: WHITE;
+	color: rgb(45, 81, 108);
+	border: solid 2px rgb(45, 81, 108);
+}
+
+section.comment .comment-list {
+	//
+}
+
+section.comment .comment-list p.no-comment {
+	//
+}
+
+section.comment .comment-list article.comment-unit {
+	width: 100%;
+	min-height: 200px;
+	padding: 15px 0;
+	border-top: solid 1px #aaa;
+}
+
+section.comment .comment-list article.comment-unit:last-child {
+	border-bottom: solid 1px #aaa;
+}
+
+section.comment .comment-list article.comment-unit .comment-header {
+	position: relative;
+	height: 40px;
+	margin-bottom: 10px;
+	padding: 5px 0;
+	width: 100%;
+	font-size: 0;
+}
+
+section.comment .comment-list article.comment-unit .comment-header div.user-icon {
+	width: 30px;
+	height: 30px;
+	border-radius: 15px;
+	background: #aaa;
+	margin-right: 15px;
+	/* margin: 5px 10px 5px 0; */
+	display: inline-block;
+}
+
+section.comment .comment-list article.comment-unit .comment-header div.account_headline-data {
+	display: inline-block;
+	width: 200px;
+	height: 30px;
+}
+
+section.comment .comment-list article.comment-unit .comment-header div.account_headline-data h1.user-name {
+	display: block;
+	width: 100%;
+	height: 16px;
+	line-height: 16px;
+	font-size: 16px;
+	color: #000;
+	font-weight: bold;
+	margin: 0;
+}
+
+section.comment .comment-list article.comment-unit .comment-header div.account_headline-data h2.user-id {
+	display: block;
+	width: 100%;
+	height: 14px;
+	font-size: 14px;
+	color: #aaa;
+	font-weight: bold;
+	margin: 0;
+}
+
+section.comment .comment-list article.comment-unit .comment-header div.post-time-wrapper {
+	display: inline-block;
+	float: right;
+	text-align: right;
+	width: 200px;
+	height: 30px;
+	font-size: 0;
+}
+
+section.comment .comment-list article.comment-unit .comment-header div.post-time-wrapper small.comment-date {
+	font-size: 14px;
+	line-height: 14px;
+	vertical-align: top;
+	color: #aaa;
+}
+
+section.comment .comment-list div.comment-article-wrapper {
+	padding-left: 45px;
+	padding-right: 15px;
+	margin: 0;
+	width: 100%;
+	min-height: 110px;
+}
+
+section.comment .comment-list div.comment-article-wrapper p.comment-article {
+	width: 100%;
+	margin: 0;
+	overflow-wrap: break-word;
+}
+
+
+
+
+section.comment div.comment-list div.comment-footer {
+	width: 100%;
+	height: 40px;
+	padding: 5px 0;
+	font-size: 0;
+}
+
+section.comment div.comment-list div.comment-footer div.evaluation-wrapper {
+	position: relative;
+	display: inline-block;
+	width: 100px;
+	height: 30px;
+	margin: 0 10px;
+	float: right;
+	text-align: left;
+}
+
+section.comment div.comment-list div.comment-footer div.evaluation-wrapper div.evaluation-icon {
+	/* font-size: 20px; */
+	width: 45px;
+	margin-right: 10px;
+	font-size: 0;
+	display: inline-block;
+	line-height: 30px;
+	text-align: center;
+	user-select: none;
+}
+
+section.comment div.comment-list div.comment-footer div.evaluation-wrapper div.evaluation-icon p {
+	display: block;
+	height: 20px;
+	line-height: 20px;
+	margin: 0;
+	font-size: 20px;
+	color: #aaa;
+}
+
+section.comment div.comment-list div.comment-footer div.evaluation-wrapper:hover {
+	cursor: pointer;
+}
+
+section.comment div.comment-list div.comment-footer div.evaluation-wrapper:first-child:hover > .evaluation-icon p {
+	color: #222;
+}
+
+section.comment div.comment-list div.comment-footer div.evaluation-wrapper:first-child:hover > .evaluation-icon small {
+	color: #222;
+}
+
+section.comment div.comment-list div.comment-footer div.evaluation-wrapper:nth-child(2):hover > .evaluation-icon p {
+	color: #4285f4;
+}
+
+section.comment div.comment-list div.comment-footer div.evaluation-wrapper:nth-child(2):hover > .evaluation-icon small {
+	color: #4285f4;
+}
+
+section.comment div.comment-list div.comment-footer div.evaluation-wrapper div.evaluation-icon small {
+	display: block;
+	height: 10px;
+	line-height: 10px;
+	color: #aaa;
+	font-size: 10px;
+}
+
+section.comment div.comment-list div.comment-footer div.evaluation-wrapper div.evaluation-count {
+	top: 0;
+	height: 22px;
+	display: inline-block;
+	vertical-align: top;
+	font-size: 20px;
+	line-height: 22px;
+	color: #aaa;
+}
+
+section.comment div.comment-list div.comment-footer div.evaluation-wrapper div.evaluation-count p {
+	margin: 0;
+}

@@ -1,1 +1,82 @@
 @import url('timeline.css');
+body {
+	display: -webkit-flex;
+	display: flex;
+}
+main {
+	flex-basis: 100%;
+}
+.wrapper {
+	width: calc(100% - 50px);
+	max-width: 1400px;
+	font-size: 0;
+	margin: 0 auto;
+	padding-top: 30px;
+	display: flex;
+}
+
+.wrapper .timeline {
+	min-width: 0;
+	min-height: 1000px;
+	padding: 16px;
+}
+.wrapper article {
+	box-sizing: border-box;
+	background: WHITE;
+	font-size: 18px;
+	width: 100%;
+	height: 100%;
+	padding: 50px 100px;
+}
+
+
+.wrapper aside {
+	position: -webkit-sticky;
+	position: sticky;
+	top: 34px;
+	padding: 16px;
+	min-height: 500px;
+	max-height: 800px;
+	box-sizing: border-box;
+	background: WHITE;
+	font-size: 18px;
+	border: solid 1px #c2c2c2;
+	border-radius: 5px;
+}
+
+.wrapper aside .side-information {
+	display: block;
+	width: 100%;
+	padding: 25px 50px;
+	height: 100%;
+}
+
+.wrapper aside .side-information .profile-icon{
+	width: 200px;
+	height: 200px;
+	border-radius: 100px;
+	border: solid 10px #fff;
+	margin: 25px auto;
+	background: #aaa;
+}
+
+.wrapper aside .side-information h1.user-name {
+	font-size: 36px;
+	font-weight: bold;
+	color: #000;
+}
+
+.wrapper aside .side-information h2.user-id {
+	font-size: 24px;
+	font-weight: bold;
+	color: gray;
+}
+
+.wrapper aside .side-information p.user-profile {
+	margin-top: 25px;
+	border-top: solid 1px #aaa;
+	padding-top: 25px;
+	font-size: 16px;
+	font-weight: lighter;
+	color: #000;
+}
