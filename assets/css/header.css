@@ -61,7 +61,8 @@ section.menu ul li {
 }
 
 section.menu ul li:hover {
-	background: #f5f5f5;
+	/* background: #f5f5f5; */
+	background: #fafafa;
 }
 
 section.menu ul li:hover > a span{
@@ -107,6 +108,7 @@ section.menu ul li a span:last-child {
 
 .current {
 	background: #f5f5f5;
+	background: #fafafa;
 }
 .current > a span {
 	color: rgb(45, 81, 108) !important;
