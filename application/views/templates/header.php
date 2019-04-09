@@ -35,9 +35,6 @@ $current_url = current_url();
 				var uri = '<?= base_url() ?>';
 				if(parameter != "") location.href = uri + 'detail?id=' + parameter;
 			}
-			// $(function() {
-			// 	alert($(window).width());
-			// });
 		</script>
 	</head>
 	<body>
@@ -71,6 +68,12 @@ $current_url = current_url();
 								'icon' => 'restore'
 							),
 							array(
+								'url' => base_url().'favorite',
+								'title' => 'お気に入り',
+								// 'icon' => 'favorite'
+								'icon' => 'grade'
+							),
+							array(
 								'url' => base_url().'postedit',
 								'title' => '投稿',
 								'icon' => 'add'
@@ -86,9 +89,19 @@ $current_url = current_url();
 								'icon' => 'person'
 							),
 							array(
+								'url' => base_url().'home/friend',
+								'title' => '友達',
+								'icon' => 'people'
+							),
+							array(
 								'url' => base_url().'timetable',
 								'title' => '時間割',
 								'icon' => 'date_range'
+							),
+							array(
+								'url' => base_url().'setting',
+								'title' => '設定',
+								'icon' => 'settings'
 							),
 							array(
 								'url' => base_url().'logout',
@@ -106,10 +119,9 @@ $current_url = current_url();
 								'icon' => 'person_add'
 							)
 						);
+						$blacklist = (isset($_SESSION['id'])) ? array('ログイン', 'アカウント登録') : array('通知', '履歴', 'お気に入り', '投稿', '友達', 'マイページ', '設定', 'ログアウト');
 					foreach($page_url as $el) :
-						if($el['title'] == 'ログアウト' && !isset($_SESSION['id'])) continue;
-						if($el['title'] == 'ログイン' && isset($_SESSION['id'])) continue;
-						if($el['title'] == 'アカウント登録' && isset($_SESSION['id'])) continue;
+						if(in_array($el['title'], $blacklist)) continue;
 						if($el['url'] == $current_url) :
 					?>
 

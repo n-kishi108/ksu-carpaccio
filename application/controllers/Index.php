@@ -30,7 +30,7 @@ class Index extends CI_Controller {
 		}
 		$this->load->view('templates/header'); // views/templates/header.phpの呼び出し
 		$this->load->view('index/index', $data); // views/index/index.phpの呼び出し
-		$this->load->view('templates/footer'); // views/templates/footer.phpの呼び出し
+		// $this->load->view('templates/footer'); // views/templates/footer.phpの呼び出し
 	}
 
 	// public function home($data) { //読み込みたいビュー(html)を順番に書く。$thisはCI_Controllerのことを指し、viewsディレクトリのなかのxxxをloadしていますよと行ったニュアンスになる。

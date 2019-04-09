@@ -11,7 +11,7 @@
 		<?php foreach($col as $day): ?>
 
 		<div class="class-unit <?= $day ?> <?= $time ?>" onclick="">
-			<h1>保健・体育</h1>
+			<h1>数学</h1>
 			<h2><?= $place ?></h2>
 		</div>
 
