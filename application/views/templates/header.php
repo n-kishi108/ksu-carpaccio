@@ -38,6 +38,8 @@ $current_url = current_url();
 		</script>
 	</head>
 	<body>
+		<!-- <header style="position: fixed; top: 0; left: 0; z-index: 1; background: rgb(65, 101, 128); width: 100vw; height: 50px; border: none;">
+		</header> -->
 		<nav class="navigation">
 			<section id="toggle_area" class="hamburger show">
 				<div class="hamburger-wrapper">

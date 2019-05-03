@@ -1,10 +1,19 @@
+/*モジュール軍*/
+.transition005s{
+	transition: .05s;
+}
+nav.short {width: 50px;}
+nav.nomal {width: 200px;}
+
+main.short {margin-left: 50px;}
+main.nomal {margin-left: 200px;}
 /*ベースカラーは
 rgb(45, 81, 108)
 or
 rgb(97, 171, 170)
 */
 nav.navigation {
-	width: 200px;
+	/* width: 200px; */
 	height: 100%;
 	position: fixed;
 	top: 0;

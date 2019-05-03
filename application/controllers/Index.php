@@ -1,5 +1,7 @@
 <?php
 session_start();
+// echo phpinfo();
+// exit;
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Index extends CI_Controller {

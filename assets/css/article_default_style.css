@@ -1,0 +1,17 @@
+#prev-main {
+	//
+}
+
+#prev-main pre {
+	//
+}
+
+#prev-main pre code, p.article code {
+	/* font-family: "SFMono-Regular"; */
+	display: block;
+	width: 100%;
+	padding: 20px 50px;
+	margin: 20px auto;
+	background: #364549;
+	color: #fafafa;
+}

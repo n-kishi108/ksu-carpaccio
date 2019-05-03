@@ -2,7 +2,7 @@ body{background: #fafafa;}
 main {
 	width: calc(100%-200px);
 	min-height: 100vh;
-	margin-left: 200px;
+	/* margin-left: 200px; */
 	padding: 30px 60px;
 }
 
