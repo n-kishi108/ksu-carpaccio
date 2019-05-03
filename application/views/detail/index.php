@@ -1,16 +1,13 @@
 <link rel="stylesheet" href="<?= base_url() ?>assets/css/detail.css">
 <div class="wrapper row">
-	<div class="article-wrapper col-md-8">
+	<div class="article-wrapper col-xl-8">
 		<article>
 			<small><?= $article['date'] ?></small>
 			<h1><?= $article['title'] ?></h1>
-			<h2 class="preview">
-				<p><?= $article['head'] ?></p>
-			</h2>
 			<p class="article"><?= $article['article'] ?></p>
 		</article>
 	</div>
-	<aside class="col-md-4">
+	<aside class="col-xl-4">
 		<div class="side-information">
 			<div class="profile-icon"></div>
 			<h1 class="user-name"><?= $account['username'] ?></h1>
@@ -21,13 +18,13 @@
 </div>
 
 <section class="comment row">
-	<section class="col-md-8">
+	<section class="col-xl-8">
 		<h2>コメント</h2>
 		<!-- <form action="<?= base_url(); ?>sendComment" method="post"> -->
 		<!-- <form> -->
 			<div class="comment-wrapper" id="form">
 				<input id="article-id" type="hidden" name="article-id" value="<?= $article_id ?>">
-				<textarea id="comment-article" name="comment"></textarea>
+				<textarea id="comment-article" name="comment" placeholder="コメントする"></textarea>
 				<!-- <input type="submit" class="btn" value="コメントする"> -->
 				<button class="btn" value="コメントする" onclick="sendComment()">コメントする</button>
 			</div>
@@ -84,11 +81,14 @@
 
 			<?php endif; ?>
 		</div>
+		<script src="<?= base_url() ?>assets/js/comment.js">
+
+		</script>
 		<script>
 			autoUpdate('<?= $_GET['id'] ?>', '<?= $_SESSION['id'] ?>');
 		</script>
 	</section>
-	<section class="col-md-4">
+	<section class="col-xl-4">
 		<aside class="">
 			関連記事
 		</aside>

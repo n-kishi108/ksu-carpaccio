@@ -1,9 +1,222 @@
+@import url('article_default_style.css');
+
+/*
+モジュール群
+*/
+.w100 {
+	display: block;
+	width: 100%;
+}
+
+.h40 {height: 40px;}
+.h50 {height: 50px;}
+
+.pv5{padding-top: 5px; padding-bottom: 5px;}
+
+/*
+要素指定
+*/
+main{
+	height: auto;
+}
 div.wrapper {
+	width: 100%;
+	/* min-height: 1000px; */
+	margin: 0 auto;
+}
+
+div.wrapper form {
+	display: block;
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+}
+
+div.wrapper form .form-header {
+	display: block;
+	width: 100%;
+	height: 100px;
+	margin: 0 auto;
+}
+
+div.wrapper form div input[type='submit'] {
+	float: right;
+	width: 150px;
+	height: 40px;
+	/* margin: 5px 0; */
+	border-radius: 8px;
+	box-sizing: border-box;
+	transition: .2s;
+}
+
+div.wrapper form div input[type='submit']:focus {
+	outline: none;
+}
+/* div.wrapper form div button[name='preview']:hover {
+	background: #eee;
+}
+
+div.wrapper form div input[type='submit']:hover {
+	background: #eee;
+} */
+
+div.wrapper form div input[type='submit'] {
+	background: rgb(45, 81, 108);
+	color: WHITE;
+	margin-left: 5px;
+}
+
+div.wrapper form div input.input-title {
+	/* margin: 5px 0; */
+	border: solid 1px rgb(45, 81, 108);
+	border-radius: 8px;
+	padding: 5px;
+}
+
+div.wrapper form div input.input-title:focus {
+	outline: none;
+}
+
+div.wrapper form div.form-main {
+	display: block;
+	width: 100%;
+	min-height: 500px;
+	margin: 50px auto 0 auto;
+}
+
+div.wrapper form div.form-main .form-main-wrapper {
+	/* display: block; */
+	width: 100%;
+	/* height: 800px; */
+	height: calc(100vh - 230px);
+	margin: 0 auto;
+	font-size: 0;
+}
+
+/* div.wrapper form div.form-main .form-main-wrapper .form-article, div.wrapper form div.form-main .form-main-wrapper .form-article {
+	display: block;
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;
+} */
+
+div.wrapper form div.form-main .form-main-wrapper .form-article {
+	display: block;
+	height: 100%;
+}
+
+div.wrapper form div.form-main .form-main-wrapper .form-article:first-child {
+	padding-right: 5px;
+	padding-left: 0;
+}
+
+div.wrapper form div.form-main .form-main-wrapper .form-article:last-child {
+	padding-left: 5px;
+	padding-right: 0;
+}
+
+div.wrapper form div.form-main .form-main-wrapper .form-article .edit-wrapper, div.wrapper form div.form-main .form-main-wrapper .form-article .prev-wrapper {
+	/* padding: 0 5px; */
+	font-size: 18px;
+	background: WHITE;
+	border: solid 1px #aaa;
+	height: 100%;
+	border-radius: 8px;
+	overflow: hidden;
+}
+
+div.wrapper form div.form-main .form-main-wrapper .form-article .edit-wrapper .edit-header, div.wrapper form div.form-main .form-main-wrapper .form-article .prev-wrapper .prev-header {
+	width: 100%;
+	height: 40px;
+	background: #fafafa;
+	border-bottom: solid 1px #aaa;
+	padding: 5px 10px;
+}
+
+div.wrapper form div.form-main .form-main-wrapper .form-article .edit-wrapper .edit-header .form-header-wrapper, div.wrapper form div.form-main .form-main-wrapper .form-article .prev-wrapper .prev-header .form-header-wrapper {
+	width: 100%;
+	height: 30px;
+	line-height: 30px;
+	font-size: 14px;
+	color: #454545;
+}
+
+div.wrapper form div.form-main .form-main-wrapper .form-article .edit-wrapper .edit-header .form-header-wrapper span {
+	font-size: 14px;
+	float: left;
+}
+
+div.wrapper form div.form-main .form-main-wrapper .form-article .edit-wrapper .edit-header .form-header-wrapper ul {
+	display: inline-block;
+	float: right;
+	height: 30px;
+	width: 355px;
+	padding: 0;
+	margin: 0;
+	font-size: 0;
+}
+
+div.wrapper form div.form-main .form-main-wrapper .form-article .edit-wrapper .edit-header .form-header-wrapper ul li {
+	width: 30px;
+	height: 30px;
+	font-size: 24px;
+	line-height: 30px;
+	text-align: center;
+	border-radius: 4px;
+	margin: 0 5px;
+	padding: 0;
+	color: #666;
+	transition: .2s;
+	user-select: none;
+}
+
+div.wrapper form div.form-main .form-main-wrapper .form-article .edit-wrapper .edit-header .form-header-wrapper ul li#edit-font-color {
+	/* width: 45px; */
+}
+
+div.wrapper form div.form-main .form-main-wrapper .form-article .edit-wrapper .edit-header .form-header-wrapper ul li:hover {
+	cursor: pointer;
+}
+
+div.wrapper form div.form-main .form-main-wrapper .form-article .edit-wrapper .edit-header .form-header-wrapper ul li:not(#edit-font-color):hover {
+	background: #aaa;
+	color: #fafafa;
+}
+
+div.wrapper form div.form-main .form-main-wrapper .form-article .edit-wrapper .edit-main {
+	height: calc(100% - 40px);
+}
+
+div.wrapper form div.form-main .form-main-wrapper .form-article .edit-wrapper  textarea[name='article'] {
+	width: 100%;
+	padding: 0 2%;
+	height: 100%;
+	line-height: 30px;
+	font-size: 14px;
+	color: #454545;
+	overflow-x: scroll;
+	resize: none;
+	border: none;
+	/* background: rgb(251, 250, 223); */
+}
+
+div.wrapper form div.form-main .form-main-wrapper .form-article .edit-wrapper  textarea[name='article']:focus {
+	outline: none;
+	/* background: WHITE; */
+}
+
+div.wrapper form div.form-main .form-main-wrapper .form-article .prev-wrapper #prev-main {
+	width: 100%;
+	height: 775px;
+	font-size: 14px;
+	color: #454545;
+	overflow-y: scroll;
+}
+/* div.wrapper {
 	width: 98%;
 	max-width: 1600px;
 	min-height: 100vh;
 	margin: 0 auto;
-	/* border: solid 1px #000; */
 }
 
 div.wrapper input[type='submit'] {
@@ -50,6 +263,7 @@ div.wrapper input[type='text']:focus, div.wrapper textarea:focus {
 div.editor-wrapper {
 	width: 100%;
 	min-height: 500px;
+	margin: 0;
 }
 
 div.editor-main {
@@ -119,4 +333,4 @@ aside.tags-wrapper {
 	border-radius: 10px;
 	background: #fff;
 	border: solid 1px #aaa;
-}
+} */

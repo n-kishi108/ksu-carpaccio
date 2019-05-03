@@ -1,5 +1,5 @@
 <?php
-session_start();
+// session_start();
 class Post_article extends CI_Model {
 	private $mysqli;
 	public function __construct() {
@@ -9,7 +9,9 @@ class Post_article extends CI_Model {
 	public function post($data) {
 		$date = date('YmdHis');
 		$article_id = $date.uniqid();
-		$sql = "INSERT INTO `post` (`id`, `title`, `head`, `article`, `date`, `good`, `bad`, `article-id`) VALUES('".$data['id']."','".$data['title']."','".$data['head']."','".$data['article']."', '".$date."', '0', '0', '".$article_id."')";
+		$sql = "INSERT INTO `post` (`id`, `title`, `head`, `article`, `date`, `good`, `bad`, `article-id`) VALUES('".$data['id']."','".$data['title']."','','".$data['article']."', '".$date."', '0', '0', '".$article_id."')";
+		echo $sql;
+		exit;
 		if(!$this->mysqli->query($sql)) return false;
 		return true;
 	}
