@@ -22,25 +22,66 @@ $current_url = current_url();
 		<link rel="stylesheet" href="<?= base_url() ?>assets/css/style.css"> <!--ここにメインのレイアウト-->
 
 		<!-- js読み込み -->
-		<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+		<script src="https://code.jquery.com/jquery-3.0.0.js"></script>
+		<script src="https://code.jquery.com/jquery-migrate-3.0.0.js"></script>
+		<!-- <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script> -->
 		<script src="<?= base_url() ?>assets/js/bootstrap.js"></script>
 		<script src="<?= base_url() ?>assets/js/database.js"></script>
-		<script src="<?= base_url() ?>assets/js/style.js"></script>
+		<!-- <script src="<?= base_url() ?>assets/js/style.js"></script> -->
 		<!-- <script src="<?= base_url() ?>assets/js/helper.js?uri=<?= base_url()?>"></script> -->
 		<?php if($current_url == base_url().'home'): ?>
 		<script src="<?= base_url() ?>assets/js/mypage.js"></script>
 		<?php endif; ?>
 		<script>
+			<!--
+			let mode = '<?=$showmode?>';
 			function pageJump(parameter) {
 				var uri = '<?= base_url() ?>';
 				if(parameter != "") location.href = uri + 'detail?id=' + parameter;
 			}
+
+			const list = new Array('.navigation', 'main');
+
+			$(window).on('load', function() {
+				$('.navigation').addClass('transition005s');
+				$('main').addClass('transition005s');
+			});
+
+			$(function() {
+				$('#toggle_area').on('click', function(){
+					if($('.navigation').hasClass('nomal')) {
+						for(let el of list) {
+							$(el).removeClass('nomal').addClass('short');
+						}
+						mode = 'short';
+					}else if($('.navigation').hasClass('short')) {
+						for(let el of list) {
+							$(el).removeClass('short').addClass('nomal');
+						}
+						mode = 'nomal';
+					}
+					$.ajax({
+						type: 'GET',
+						url: 'configController/showmode?mode=' + mode,
+						processData: false,
+						contentType: false,
+					});
+				});
+			});
+			-->
 		</script>
 	</head>
 	<body>
-		<!-- <header style="position: fixed; top: 0; left: 0; z-index: 1; background: rgb(65, 101, 128); width: 100vw; height: 50px; border: none;">
-		</header> -->
-		<nav class="navigation">
+		<?php if(isset($showmode)): ?>
+			<?php if($showmode == 'nomal'):?>
+				<nav class="navigation nomal">
+			<?php elseif($showmode == 'short'):?>
+				<nav class="navigation short">
+			<?php endif;?>
+		<?php else: ?>
+			<nav class="navigation">
+		<?php endif; ?>
+		<!-- <nav class="navigation"> -->
 			<section id="toggle_area" class="hamburger show">
 				<div class="hamburger-wrapper">
 					<div class="hamburger-main">
@@ -60,7 +101,8 @@ $current_url = current_url();
 								'icon' => 'home'
 							),
 							array(
-								'url' => base_url().'alert',
+								'url' => '',
+								// 'url' => base_url().'alert',
 								'title' => '通知',
 								'icon' => 'notifications'
 							),
@@ -146,4 +188,13 @@ $current_url = current_url();
 				<?= $_SESSION['username'] ?>
 			</header>
 		<?php endif; ?>
-		<main>
+		<!-- <main> -->
+		<?php if(isset($showmode)): ?>
+			<?php if($showmode == 'nomal'):?>
+				<main class="nomal">
+			<?php elseif($showmode == 'short'):?>
+				<main class="short">
+			<?php endif;?>
+		<?php else: ?>
+			<main>
+		<?php endif; ?>

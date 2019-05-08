@@ -1,21 +1,34 @@
 function addEvaluation(userId, commentId, evaluation) {
 	if(commentId == '') return;
 
-	$.ajaxSetup({
+	// $.ajaxSetup({
+	// 	type: 'GET',
+	// 	url: 'ajaxController/',
+	// 	async: false,
+	// });
+	//
+	// let send = {
+	// 	'comment_id': commentId,
+	// 	'user_id': userId,
+	// 	'f': evaluation
+	// };
+	//
+	// let result = $.ajax({ data: $.param(send) }).responseText;
+	//
+	// $('#comment-' + commentId + '-' + evaluation + ' > div.evaluation-count p').text(result);
+
+	$.ajax({
 		type: 'GET',
 		url: 'ajaxController/',
-		async: false,
-	});
-
-	let send = {
-		'comment_id': commentId,
-		'user_id': userId,
-		'f': evaluation
-	};
-
-	let result = $.ajax({ data: $.param(send) }).responseText;
-
-	$('#comment-' + commentId + '-' + evaluation + ' > div.evaluation-count p').text(result);
+		data: {
+			'comment_id': commentId,
+			'user_id': userId,
+			'f': evaluation
+		},
+		anync: false
+	}).done(function(data) {
+		$('#comment-' + commentId + '-' + evaluation + ' > div.evaluation-count p').text(data);
+	})
 
 }
 
