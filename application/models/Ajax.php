@@ -58,6 +58,37 @@
 			return $array;
 		}
 
+		public function update_showmode($id, $mode) {
+			if(!$this->data_isExists('viewmode', 'id', $id)) {
+				$sql = "INSERT INTO `viewmode` (`id`, `mode`) VALUES ('$id', '$mode')";
+				$result = $this->mysqli->query($sql);
+				return ($result)?true:false;
+			}else{
+				$sql = "UPDATE `viewmode` SET `id`='$id', `mode`='$mode' WHERE `id` = '$id'";
+				$result = $this->mysqli->query($sql);
+				return ($result)?true:false;
+			}
+			return false;
+		}
+
+		public function data_isExists($table, $column, $id) {
+			$sql = "SELECT * FROM `$table` WHERE `$column` = '$id'";
+			$result = $this->mysqli->query($sql);
+			while($row = $result->fetch_assoc()) {
+				return true;
+			}
+			return false;
+		}
+
+		public function getShowMode($id) {
+			$sql = "SELECT * FROM `viewmode` WHERE `id`='$id'";
+			$result = $this->mysqli->query($sql);
+			while($row = $result->fetch_assoc()) {
+				return $row['mode'];
+			}
+			return null;
+		}
+
 		// public function show($get) {
 		// 	return;
 		// }

@@ -1,15 +1,4 @@
 <?php
-// $mysqli = new mysqli('localhost', 'root', '', 'carpaccio');
-// echo "<pre>";
-// var_dump($mysqli);
-// exit;
-// if($mysqli) {
-// // if (!class_exists('mysqli')) {
-//     echo 'We don\'t have mysqli class!!!';
-// } else {
-//     echo 'Phew we have it!';
-// }
-// exit;
 /**
  * CodeIgniter
  *

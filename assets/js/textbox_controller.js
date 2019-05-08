@@ -120,6 +120,7 @@ $('#file_info').change( function () {
 		return;
 	}else{
 		var formdata = new FormData($('#post').get(0));
+		// console.log(formdata);
 		$.ajax({
 			type: 'POST',
 			url: 'post/imgupload/',
